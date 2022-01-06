@@ -52,10 +52,14 @@ class Movies extends React.Component {
          
         return (
             <div className='row'>
-              <div className='col-2'>
-                  <ListGroup items={this.state.genres} onItemSelect={this.handleGenreSelect}/>
+              <div className='col-3 pt-3'>
+                  <ListGroup 
+                  items={this.state.genres}
+                  textProperty= "name"
+                  valuePropert="_id"
+                  onItemSelect={this.handleGenreSelect}/>
               </div>
-              <div className='col'>
+              <div className='col pt-3'>
               <p>showing {this.state.movies.length} movies in the database</p> 
 
          <table className='table'>
